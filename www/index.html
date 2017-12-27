@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Your app title -->
+    <title>My App</title>
+
+    <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+     -->
+	
+    <link rel="stylesheet" href="css/framework7.css">
+	<link type="text/css" rel="stylesheet" href="css/wheelcolorpicker.css" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+	<div id="app">
+	<div class="statusbar"></div>
+    <div class="view view-main view-init" data-url="/">
+      <div class="page ">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only">
+                <i class="icon material-icons">&#xE5D2;</i>
+              </a>
+            </div>
+            <div class="title sliding koodak-font right">وایفای کنترلر</div>
+            <div class="right">
+              <a class="link icon-only" data-searchbar=".searchbar-components">
+                <i class="icon material-icons">&#xE8AC;</i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+		
+			      <div class="toolbar tabbar tabbar-labels toolbar-bottom-md">
+      <div class="toolbar-inner">
+        <a href="#staticColorTab" class="tab-link tab-link-active">
+
+          <i class="icon material-icons">&#xE40A;</i>
+          <span class="tabbar-label koodak-font">رنگ ثابت</span>
+        </a>
+        <a href="#animationTab" class="tab-link">
+          <i class="icon material-icons">&#xE039;</i>
+          <span class="tabbar-label koodak-font">انیمیشن</span>
+        </a>
+      </div>
+    </div>
+    <div class="tabs">
+      <div id="staticColorTab" class="page-content tab tab-active">
+	  
+	        <div class="block-title koodak-font">درصد روشنایی: <span id="brightnessSliderVal"></span></div>
+      <div class="list simple-list">
+        <ul>
+          <li>
+            <div class="item-cell width-auto flex-shrink-0">
+              <i class="icon f7-icons ios-only">circle</i>
+              <i class="icon material-icons md-only">&#xE1AD;</i>
+            </div>
+            <div class="item-cell flex-shrink-3">
+              <div class="range-slider range-slider-init color-orange" data-label="true">
+                <input id="brightnessSlider" type="range" min="0" max="100" step="1" value="50">
+              </div>
+            </div>
+            <div class="item-cell width-auto flex-shrink-0">
+              <i class="icon f7-icons ios-only">circle_half</i>
+              <i class="icon material-icons md-only">&#xE3AC;</i>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+	  <!-- Color picker -->
+	   <div id="colorPickerDivWraper">
+                  <!-- link for RGB popup 
+                  <div  id="popupRGBDialog">
+				  <table style="width:95%; margin:auto;">
+				 <tr>
+				 <td style="width: 15%;vertical-align:middle;" >
+				  <p class="colorSlider" style="color:#900; font-size: 0.9em ;">R: <span class="sliderValRGB"  id="colorSliderRNumber"></span>	</p>
+				 </td>
+				 <td style="width: 85%;vertical-align:middle;" id="colorSliderRCell">
+				  <input id="colorSliderR" style="width:100%;" type="range" name="colorSliderR" min="0" max="255" data-highlight="true"/>
+				 </td>
+				 </tr>
+				 
+				 <tr>
+				 <td style="width: 15%;vertical-align:middle;">
+				  <p class="colorSlider" style="color:#090;font-size: 0.9em ;">G: <span class="sliderValRGB"  id="colorSliderGNumber"></span>	</p>
+				 </td>
+				 <td style="width: 85%;vertical-align:middle;" id="colorSliderGCell">
+				  <input id="colorSliderG" style="width:100%;" type="range" name="colorSliderG" min="0" max="255" data-highlight="true"/>
+				 </td>
+				 </tr>
+				 
+				 <tr>
+				 <td style="width: 15%;vertical-align:middle;">
+				  <p class="colorSlider" style="color:#009;font-size: 0.9em ;">B: <span class="sliderValRGB"  id="colorSliderBNumber"></span>	</p>
+				 </td>
+				 <td style="width: 58%;vertical-align:middle;" id="colorSliderBCell">
+				  <input id="colorSliderB" style="width:100%;" type="range" name="colorSliderB" min="0" max="255" data-highlight="true"/>
+				 </td>
+				 </tr>
+
+				 </table>
+				 <a href="#" id="cancelButtonRGBDialog" data-role="button" data-inline="true" data-rel="back" data-theme="c">انصراف</a>    
+                        <a href="#" id="okButtonRGBDialog" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="a">تایید</a>
+                  </div> -->
+					<div id="colorPickerRGBIcon" >
+						<button class="button color-black"><i class="icon material-icons">&#xE429;</i></button>
+					</div>
+					<div id="colorPickerDiv">
+						<input type="text" id="colorPickerInput"  data-wcp-cssClass="picker" data-role="none" >
+					</div>	  
+	  
+	  	  </div>
+	  
+	  
+
+      </div>
+      <div id="animationTab" class="page-content tab">
+        <div class="block">
+			<div class="block">
+          <p class="koodak-font" ><b>انیمیشن</b></p>
+        </div>
+        </div>
+      </div>
+    </div>
+		
+		
+ 
+
+	  
+	 	  
+    </div>
+	</div>
+	</div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.wheelcolorpicker.js"></script>
+	<script type="text/javascript" src="js/framework7.min.js"></script>
+	<script type="text/javascript" src="js/routes.js"></script>
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>
