@@ -881,6 +881,8 @@
         );
 		
 		// Attach events
+		//wheelCursor_mousedown
+		$('html').on('touchstart.wheelColorPicker', WCP.Handler.html_mousemove);  //here is the problem
 		$('html').on('mouseup.wheelColorPicker', WCP.Handler.html_mouseup);
 		$('html').on('touchend.wheelColorPicker', WCP.Handler.html_mouseup);
 		$('html').on('mousemove.wheelColorPicker', WCP.Handler.html_mousemove);
