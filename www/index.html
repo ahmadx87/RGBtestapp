@@ -31,42 +31,45 @@
           <div class="navbar-inner">
             <div class="left">
               <a href="#" class="link icon-only">
-                <i class="icon material-icons">&#xE5D2;</i>
+                <i class="icon material-icons">menu</i>
               </a>
             </div>
             <div class="title sliding koodak-font right">وایفای کنترلر</div>
             <div class="right">
-              <a class="link icon-only" data-searchbar=".searchbar-components">
-                <i class="icon material-icons">&#xE8AC;</i>
+              <a class="link icon-only" id="powerBtn">
+                <i class="icon material-icons">power_settings_new</i>
               </a>
             </div>
 
           </div>
         </div>
+
+
 		
 			      <div class="toolbar tabbar tabbar-labels toolbar-bottom-md">
       <div class="toolbar-inner">
         <a href="#staticColorTab" class="tab-link tab-link-active">
 
-          <i class="icon material-icons">&#xE40A;</i>
+          <i class="icon material-icons">palette</i>
           <span class="tabbar-label koodak-font">رنگ ثابت</span>
         </a>
         <a href="#animationTab" class="tab-link">
-          <i class="icon material-icons">&#xE039;</i>
+          <i class="icon material-icons">play_circle_outline</i>
           <span class="tabbar-label koodak-font">انیمیشن</span>
         </a>
       </div>
     </div>
     <div class="tabs">
-      <div id="staticColorTab" class="page-content tab tab-active">
+      <div id="staticColorTab" class="page-content tab tab-active" style="overflow:hidden">
+	  
+
 	  
 	        <div class="block-title koodak-font">درصد روشنایی: <span id="brightnessSliderVal"></span></div>
       <div class="list simple-list">
         <ul>
           <li>
             <div class="item-cell width-auto flex-shrink-0">
-              <i class="icon f7-icons ios-only">circle</i>
-              <i class="icon material-icons md-only">&#xE1AD;</i>
+              <i class="icon material-icons">brightness_low</i>
             </div>
             <div class="item-cell flex-shrink-3">
               <div class="range-slider range-slider-init color-orange" data-label="true">
@@ -74,8 +77,7 @@
               </div>
             </div>
             <div class="item-cell width-auto flex-shrink-0">
-              <i class="icon f7-icons ios-only">circle_half</i>
-              <i class="icon material-icons md-only">&#xE3AC;</i>
+              <i class="icon material-icons">brightness_high</i>
             </div>
           </li>
         </ul>
@@ -83,58 +85,81 @@
 
 	  <!-- Color picker -->
 	   <div id="colorPickerDivWraper">
-                  <!-- link for RGB popup 
-                  <div  id="popupRGBDialog">
-				  <table style="width:95%; margin:auto;">
-				 <tr>
-				 <td style="width: 15%;vertical-align:middle;" >
-				  <p class="colorSlider" style="color:#900; font-size: 0.9em ;">R: <span class="sliderValRGB"  id="colorSliderRNumber"></span>	</p>
-				 </td>
-				 <td style="width: 85%;vertical-align:middle;" id="colorSliderRCell">
-				  <input id="colorSliderR" style="width:100%;" type="range" name="colorSliderR" min="0" max="255" data-highlight="true"/>
-				 </td>
-				 </tr>
-				 
-				 <tr>
-				 <td style="width: 15%;vertical-align:middle;">
-				  <p class="colorSlider" style="color:#090;font-size: 0.9em ;">G: <span class="sliderValRGB"  id="colorSliderGNumber"></span>	</p>
-				 </td>
-				 <td style="width: 85%;vertical-align:middle;" id="colorSliderGCell">
-				  <input id="colorSliderG" style="width:100%;" type="range" name="colorSliderG" min="0" max="255" data-highlight="true"/>
-				 </td>
-				 </tr>
-				 
-				 <tr>
-				 <td style="width: 15%;vertical-align:middle;">
-				  <p class="colorSlider" style="color:#009;font-size: 0.9em ;">B: <span class="sliderValRGB"  id="colorSliderBNumber"></span>	</p>
-				 </td>
-				 <td style="width: 58%;vertical-align:middle;" id="colorSliderBCell">
-				  <input id="colorSliderB" style="width:100%;" type="range" name="colorSliderB" min="0" max="255" data-highlight="true"/>
-				 </td>
-				 </tr>
-
-				 </table>
-				 <a href="#" id="cancelButtonRGBDialog" data-role="button" data-inline="true" data-rel="back" data-theme="c">انصراف</a>    
-                        <a href="#" id="okButtonRGBDialog" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="a">تایید</a>
-                  </div> -->
 					<div id="colorPickerRGBIcon" >
-						<button class="button color-black"><i class="icon material-icons">&#xE429;</i></button>
+						<button class="button color-black open-vertical" ><i class="icon material-icons">tune</i></button>
 					</div>
 					<div id="colorPickerDiv">
 						<input type="text" id="colorPickerInput"  data-wcp-cssClass="picker" data-role="none" >
 					</div>	  
 	  
-	  	  </div>
-	  
-	  
+	  	</div>
+		
+		
+	<div id="rgbSliderPickerPopUp" style="display:hidden">
+		   <div class="block">
+             <div class="range-slider color-red" data-label="true">
+               <input id="redSlider" type="range" min="0" max="255" step="1" value="50">
+             </div>
+           </div>
+           <div class="block">
+             <div class="range-slider color-green" data-label="true">
+               <input id="greenSlider" type="range" min="0" max="255" step="1" value="60">
+             </div>
+           </div>
+           <div class="block" >
+             <div class="range-slider color-blue" data-label="true">
+               <input id="blueSlider"  type="range" min="0" max="255" step="1" value="70">
+             </div>
+           </div>
+	    </div> 
+		
+		
+		
+		
+	
 
-      </div>
+		
+	  </div>
+	  
       <div id="animationTab" class="page-content tab">
-        <div class="block">
-			<div class="block">
-          <p class="koodak-font" ><b>انیمیشن</b></p>
-        </div>
-        </div>
+	  
+		<div class="toolbar" style="position:fixed; top:56px">
+    <div class="toolbar-inner">
+      <a class="link" id="loadBtn"><i class="material-icons">folder_open</i></a>
+      <a class="link"><i class="material-icons">save</i></a>
+      <a class="link"><i class="material-icons">send</i></a>
+    </div>
+</div>	  
+
+
+	
+
+	<div class="list sortable koodak-font" id="animationListDiv" style="top:30px; bottom:30px">
+     <ul>
+	 <!-- will be populated ba JS -->
+      </ul>
+    </div>
+	
+<!-- Default Setup -->
+<div class="list" style="display:none">
+  <ul>
+<!-- Open In Sheet -->
+<li>
+  <a class="item-link smart-select smart-select-init" id="animationListSelect" data-open-in="sheet" data-sheet-close-link-text="تایید">
+    <select name="animationListSelect" id="animationListSelectElement">
+
+    </select>
+    <div class="item-content">
+      <div class="item-inner">
+        <div class="item-title">لیست انیمیشن</div>
+      </div>
+    </div>
+  </a>
+</li>
+</ul>
+</div>
+	
+	
       </div>
     </div>
 		
@@ -146,7 +171,6 @@
     </div>
 	</div>
 	</div>
-
     <script type="text/javascript" src="cordova.js"></script>
 	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/jquery.wheelcolorpicker.js"></script>
