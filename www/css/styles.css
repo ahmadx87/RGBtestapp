@@ -98,3 +98,29 @@ left: 50%;
 	float: left;
 	
  }
+ 
+ .appdialog{
+	 width: 94% !important;
+	 left: 3%;
+	 margin-left: 0 !important;
+ }
+ 
+ /*The following two styles are to mirror sortable list for rtl*/ 
+.sortable .sortable-handler{
+	right: auto;
+	left: 0px;
+}
+
+.md .sortable-enabled .item-inner, .md .sortable-enabled .item-link .item-inner {
+    padding-right: 15px;
+}
+/***********/
+.md label.item-radio > .icon-radio {
+    margin-right: 5px;
+}
+
+.md .toolbar a.link{
+font-family: koodak;
+direction: rtl;
+font-size: 1.1em;
+}
